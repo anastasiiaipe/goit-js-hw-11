@@ -77,9 +77,17 @@
 }
 .image-description {
   display: flex;
+  gap: 8px;
   padding: 4px 25px 4px 20px;
   text-align: center;
   justify-content: space-between;
+}
+
+.image-description p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  line-height: 1.33333;
+  letter-spacing: 0.04em;
 }
 
 .gallery-wrapper {
