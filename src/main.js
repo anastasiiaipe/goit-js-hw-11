@@ -18,8 +18,8 @@ function onFormSubmit(e) {
   loaderEl.classList.remove('hidden');
   const query = e.target.elements.query.value.trim();
   fetchImages(query).then(data => {
-    loaderEl.classList.add('.hidden');
     if (data.totalHits === 0 || query === '') {
+      loaderEl.classList.add('hidden');
       iziToast.show({
         message:
           'Sorry, there are no images matching your search query. Please try again!',
@@ -28,7 +28,7 @@ function onFormSubmit(e) {
         position: 'topRight',
       });
     } else {
-      loaderEl.classList.add('.hidden');
+      loaderEl.classList.add('hidden');
       imageTemplate(data);
     }
   });
